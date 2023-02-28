@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fourInRow"
+            type="com.example.tictactoe.FourInRowViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_200">
+
+
+        <TextView
+            android:id="@+id/announce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{fourInRow.announce}"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <ImageView
+            android:id="@+id/cell1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell2"
+            app:layout_constraintEnd_toStartOf="@+id/cell2"
+            app:layout_constraintTop_toTopOf="@+id/cell2" />
+
+        <ImageView
+            android:id="@+id/cell2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toTopOf="@+id/cell7"
+            app:layout_constraintEnd_toEndOf="@+id/cell7"
+            app:layout_constraintStart_toStartOf="@+id/cell7" />
+
+        <ImageView
+            android:id="@+id/cell3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell2"
+            app:layout_constraintStart_toEndOf="@+id/cell2"
+            app:layout_constraintTop_toTopOf="@+id/cell2" />
+
+        <ImageView
+            android:id="@+id/cell4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell3"
+            app:layout_constraintStart_toEndOf="@+id/cell3"
+            app:layout_constraintTop_toTopOf="@+id/cell3" />
+
+        <ImageView
+            android:id="@+id/cell5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell4"
+            app:layout_constraintStart_toEndOf="@+id/cell4"
+            app:layout_constraintTop_toTopOf="@+id/cell4" />
+
+        <ImageView
+            android:id="@+id/cell6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell7"
+            app:layout_constraintEnd_toStartOf="@+id/cell7"
+            app:layout_constraintTop_toBottomOf="@+id/cell2" />
+
+        <ImageView
+            android:id="@+id/cell7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toTopOf="@+id/cell13"
+            app:layout_constraintEnd_toStartOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toTopOf="@+id/cell13"
+            app:layout_constraintEnd_toEndOf="@+id/cell13"
+            app:layout_constraintStart_toStartOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toTopOf="@+id/cell13"
+            app:layout_constraintStart_toEndOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell9"
+            app:layout_constraintStart_toEndOf="@+id/cell9"
+            app:layout_constraintTop_toTopOf="@+id/cell9" />
+
+        <ImageView
+            android:id="@+id/cell11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell12"
+            app:layout_constraintEnd_toStartOf="@+id/cell12"
+            app:layout_constraintTop_toTopOf="@+id/cell12" />
+
+        <ImageView
+            android:id="@+id/cell12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell13"
+            app:layout_constraintEnd_toStartOf="@+id/cell13"
+            app:layout_constraintTop_toTopOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.406" />
+
+        <ImageView
+            android:id="@+id/cell14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell13"
+            app:layout_constraintStart_toEndOf="@+id/cell13"
+            app:layout_constraintTop_toTopOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell14"
+            app:layout_constraintStart_toEndOf="@+id/cell14"
+            app:layout_constraintTop_toTopOf="@+id/cell14" />
+
+        <ImageView
+            android:id="@+id/cell16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell17"
+            app:layout_constraintEnd_toStartOf="@+id/cell17"
+            app:layout_constraintTop_toTopOf="@+id/cell17" />
+
+        <ImageView
+            android:id="@+id/cell17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_marginEnd="1dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintEnd_toStartOf="@+id/cell13"
+            app:layout_constraintTop_toBottomOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintEnd_toEndOf="@+id/cell13"
+            app:layout_constraintStart_toEndOf="@+id/cell12"
+            app:layout_constraintTop_toBottomOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintStart_toEndOf="@+id/cell13"
+            app:layout_constraintTop_toBottomOf="@+id/cell13" />
+
+        <ImageView
+            android:id="@+id/cell20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell19"
+            app:layout_constraintStart_toEndOf="@+id/cell19"
+            app:layout_constraintTop_toTopOf="@+id/cell19" />
+
+        <ImageView
+            android:id="@+id/cell21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintEnd_toEndOf="@+id/cell16"
+            app:layout_constraintStart_toStartOf="@+id/cell16"
+            app:layout_constraintTop_toBottomOf="@+id/cell16" />
+
+        <ImageView
+            android:id="@+id/cell22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell21"
+            app:layout_constraintStart_toEndOf="@+id/cell21"
+            app:layout_constraintTop_toTopOf="@+id/cell21" />
+
+        <ImageView
+            android:id="@+id/cell23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell22"
+            app:layout_constraintStart_toEndOf="@+id/cell22"
+            app:layout_constraintTop_toTopOf="@+id/cell22" />
+
+        <ImageView
+            android:id="@+id/cell24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell23"
+            app:layout_constraintStart_toEndOf="@+id/cell23"
+            app:layout_constraintTop_toTopOf="@+id/cell23" />
+
+        <ImageView
+            android:id="@+id/cell25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:src="@drawable/four_none"
+            app:layout_constraintBottom_toBottomOf="@+id/cell24"
+            app:layout_constraintStart_toEndOf="@+id/cell24"
+            app:layout_constraintTop_toTopOf="@+id/cell24" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.755"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

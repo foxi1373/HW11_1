@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ticTacToe"
+            type="com.example.tictactoe.GamePlayTicTacToe" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.tictactoe.MainActivity"
+        android:background="@color/purple_200">
+
+        <TextView
+            android:id="@+id/announce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tic Tac Toe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.11"
+            android:textSize="24sp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/cell1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/cell5"
+            app:layout_constraintEnd_toStartOf="@+id/cell5"
+            android:src="@drawable/none"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/cell5"
+            app:layout_constraintStart_toStartOf="@+id/cell5"
+            android:src="@drawable/none"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/cell5"
+            app:layout_constraintStart_toEndOf="@+id/cell5"
+            android:src="@drawable/none"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/cell5"
+            app:layout_constraintEnd_toStartOf="@+id/cell5"
+            android:src="@drawable/none"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.384"
+            android:src="@drawable/none"
+
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/cell5"
+            app:layout_constraintStart_toEndOf="@+id/cell5"
+            android:src="@drawable/none"
+
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/cell5"
+            app:layout_constraintTop_toBottomOf="@+id/cell5"
+            android:src="@drawable/none"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/cell5"
+            app:layout_constraintTop_toBottomOf="@+id/cell5"
+            android:src="@drawable/none"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/cell9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/cell5"
+            app:layout_constraintTop_toBottomOf="@+id/cell5"
+            android:src="@drawable/none"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
