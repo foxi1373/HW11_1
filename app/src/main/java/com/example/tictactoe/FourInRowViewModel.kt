@@ -53,15 +53,15 @@ class FourInRowViewModel : ViewModel() {
 
     inner class CheckWin {
         private val diameterDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(filledRow - 3 + i, clickedIndex % 5 - 3 + i) }
+            { clickedIndex: Int, i: Int -> intArrayOf(filledRow - 3 + i, clickedIndex % n - 3 + i) }
 
         private val subDiameterDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(filledRow - 3 + i, clickedIndex % 5 + 3 - i) }
+            { clickedIndex: Int, i: Int -> intArrayOf(filledRow - 3 + i, clickedIndex % n + 3 - i) }
         private val rowDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(filledRow, clickedIndex % 5 - 3 + i) }
+            { clickedIndex: Int, i: Int -> intArrayOf(filledRow, clickedIndex % n - 3 + i) }
 
         private val columnDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(filledRow - 3 + i, clickedIndex % 5) }
+            { clickedIndex: Int, i: Int -> intArrayOf(filledRow - 3 + i, clickedIndex % n) }
         private val winDirs =
             arrayOf(diameterDirection, subDiameterDirection, rowDirection, columnDirection)
 
@@ -101,6 +101,7 @@ class FourInRowViewModel : ViewModel() {
         setCheapAll(FourInRowCheap.None.cheap)
         setIsEnabledAll(true)
         announce.value = "Four in Row"
+        turnNum = 0
     }
 
     fun setResult(clickedIndex: Int) {

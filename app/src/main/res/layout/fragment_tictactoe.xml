@@ -6,7 +6,7 @@
     <data>
         <variable
             name="ticTacToe"
-            type="com.example.tictactoe.GamePlayTicTacToe" />
+            type="com.example.tictactoe.TicTacToeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
             android:id="@+id/announce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tic Tac Toe"
+            android:text="@{ticTacToe.announce}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -69,15 +69,15 @@
             android:id="@+id/cell5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.384"
-            android:src="@drawable/none"
 
-            android:padding="5dp" />
+            app:layout_constraintVertical_bias="0.499" />
 
         <ImageView
             android:id="@+id/cell6"
@@ -123,10 +123,10 @@
             android:text="reset"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.844" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

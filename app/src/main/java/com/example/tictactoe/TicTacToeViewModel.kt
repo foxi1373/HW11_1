@@ -3,23 +3,23 @@ package com.example.tictactoe
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GamePlayTicTacToe : ViewModel() {
+class TicTacToeViewModel : ViewModel() {
     var n  = 3
     private var turnNum = 0
     val board = Array(n) { Array(n) { Cell(FourInRowCheap.None.cheap , true) } }
     var announce = MutableLiveData("TicTacToe")
 
 
-    private fun chooseCheap(): Int =
+    fun chooseCheap(): Int =
         if (turnNum % 2 == 0) TicTacToeCheap.O.cheap else TicTacToeCheap.X.cheap
 
 
     fun setCheap(clickedIndex: Int) {
-        board[clickedIndex / 5][clickedIndex % n].cheap = chooseCheap()
+        board[clickedIndex / n][clickedIndex % n].cheap = chooseCheap()
     }
 
     fun setIsEnabled(clickedIndex: Int, isEnabled: Boolean) {
-        board[clickedIndex / 5][clickedIndex % n].isEnabled = isEnabled
+        board[clickedIndex / n][clickedIndex % n].isEnabled = isEnabled
     }
 
     fun setIsEnabledAll(isEnabled: Boolean) {
@@ -42,15 +42,15 @@ class GamePlayTicTacToe : ViewModel() {
 
     inner class CheckWin {
         private val diameterDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / 5 - 2 + i, clickedIndex % 5 - 2 + i) }
+            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / n - 2 + i, clickedIndex % n - 2 + i) }
 
         private val subDiameterDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / 5 - 2 + i, clickedIndex % 5 + 2 - i) }
+            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / n - 2 + i, clickedIndex % n + 2 - i) }
         private val rowDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / 5, clickedIndex % 5 - 2 + i) }
+            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / n, clickedIndex % n - 2 + i) }
 
         private val columnDirection =
-            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / 5 - 2 + i, clickedIndex % 5) }
+            { clickedIndex: Int, i: Int -> intArrayOf(clickedIndex / n - 2 + i, clickedIndex % n) }
         private val winDirs =
             arrayOf(diameterDirection, subDiameterDirection, rowDirection, columnDirection)
 
@@ -90,6 +90,7 @@ class GamePlayTicTacToe : ViewModel() {
     fun reset() {
         setCheapAll(TicTacToeCheap.None.cheap)
         setIsEnabledAll(true)
+        turnNum = 0
     }
 
     fun setResult(clickedIndex: Int) {

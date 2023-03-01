@@ -62,13 +62,14 @@ class FourInRowFragment : Fragment(R.layout.fragment_fourinrow) {
             binding.reset.setOnClickListener {
                 viewModel.reset()
                 setIsEnabledAll(cells, true)
+                setSrcAll(cells)
             }
         }
     }
     private fun setSrc(view: ImageView, cheap: Int){
         view.setImageResource(cheap)
     }
-    private fun setSrcAll(cells: Array<ImageView>, cheap: Int){
+    private fun setSrcAll(cells: Array<ImageView>){
         for (cell in cells)
             setSrc(cell, R.drawable.four_none)
     }
